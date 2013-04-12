@@ -11,19 +11,20 @@
 	<target name="create">
 		<property name="files.basepath" value="../${mod.id}/common/${java.package.path}" />
 		<property name="files.omod" value="${files.basepath}/mod/Mod_Template.java" />
-		<property name="files.mod" value="${files.basepath}/mod/${mod.id}.java" />
+		<property name="files.mod" value="${files.basepath}/mod/mod_${mod.id}.java" />
 		<property name="files.modinfo" value="${files.basepath}/mod/ModInfo.java" />
 		<property name="files.proxy" value="${files.basepath}/mod/proxy/CommonProxy.java" />
 		<property name="files.client" value="${files.basepath}/mod/proxy/ClientProxy.java" />
 
 		<antcall target="clean" />
+		<mkdir dir="../${mod.id}/resources/" />
 		<mkdir dir="${files.basepath}" />
 		<copy todir="${files.basepath}">
 			<fileset dir="_template/common/" />
 		</copy>
 
 		<move file="${files.omod}" tofile="${files.mod}" />
-		<replace file="${files.mod}" token="@MOD_ID@" value="${mod.id}"/>
+		<replace file="${files.mod}" token="@MOD_ID@" value="mod_${mod.id}"/>
 		<replace file="${files.mod}" token="@PACKAGE@" value="${java.package}"/>
 		
 		<replace file="${files.modinfo}" token="@PACKAGE@" value="${java.package}"/>

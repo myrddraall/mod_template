@@ -1,6 +1,7 @@
 package @PACKAGE@.mod;
 
 import cp.mods.core.mod.ModBase;
+import @PACKAGE@.mod.proxy.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.PostInit;

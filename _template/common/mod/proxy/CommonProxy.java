@@ -1,3 +1,4 @@
+package @PACKAGE@.mod.proxy;
 
 import cp.mods.core.mod.proxy.ProxyBase;
 

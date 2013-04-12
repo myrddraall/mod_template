@@ -1,3 +1,4 @@
+package @PACKAGE@.mod.proxy;
 
 public class ClientProxy extends CommonProxy
 {

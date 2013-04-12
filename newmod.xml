@@ -5,6 +5,8 @@
 
 	<target name="clean">
 		<delete dir="../${mod.id}/common/" />
+		<delete file="../${mod.id}/build.xml" />
+		<delete file="../${mod.id}/build.properties" />
 	</target>
 	<target name="create">
 		<property name="files.basepath" value="../${mod.id}/common/${java.package.path}" />
